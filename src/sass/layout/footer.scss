@@ -1,0 +1,16 @@
+@charset 'utf-8';
+@use '../foundation/global/_global' as *;
+
+///////////////////////////////////////////////////////////
+// フッター
+///////////////////////////////////////////////////////////
+
+.p-footer {
+  padding: 20px;
+}
+
+.p-footer__copyright {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+}

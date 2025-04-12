@@ -1,0 +1,55 @@
+@charset 'utf-8';
+
+// リセットCSSにスタイル追加（フォーム系のみ）
+
+@use 'global/_global' as *;
+
+form {
+  // accent-color: $c--primary;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-transform: none;
+  border-radius: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+// 数値の増減ボタン非表示
+[type='number'] {
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+[type='radio'],
+[type='checkbox'] {
+  cursor: pointer;
+}
+
+button,
+[type='submit'],
+[type='reset'] {
+  cursor: pointer;
+  background: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+label {
+  cursor: pointer;
+}

@@ -1,0 +1,43 @@
+@charset 'utf-8';
+
+///////////////////////////////////////////////////////////
+// variables
+///////////////////////////////////////////////////////////
+
+// Header height
+// **********************************************
+$header_h_md: 70px;
+$header_h_sm: 64px;
+
+// BreackPoints
+// **********************************************
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+
+// Path
+// **********************************************
+$path_img: '../img/';
+
+// Color
+// **********************************************
+
+$c-primary: #004BA5;
+$c-primary-hover: #1565c0;
+$c-accent: #ff4b00;
+$c-warning: #D9000D;
+$c-warning-light: #f0d5d5;
+$c-border: #ccc;
+
+$c-text: #333;
+$c-white: #fff;
+$c-bg: #ededed;
+
+$category-news: #1571DA;
+$category-seminar: #001e64;
+$category-security: #FFF516;
+
+// Font
+// **********************************************
+$font_gothic: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;

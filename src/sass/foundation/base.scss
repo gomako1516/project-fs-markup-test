@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+///////////////////////////////////////////////////////////
+// サイトのベーススタイル
+///////////////////////////////////////////////////////////
+
+@use 'global/_global' as *;
+
+body {
+  font-family: $font_gothic;
+  font-size: 14px;
+  line-height: 1.6;
+  color: $c-text;
+  word-break: break-all;
+}
