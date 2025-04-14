@@ -43,32 +43,28 @@ window.addEventListener('scroll', () => {
 
 /* 追従バナーをフッター手前で止める
 ----------------------------- */
-// window.addEventListener('scroll', function () {
-//   const targetElement = document.querySelector('.js-floatingBanner');
-//   const footer = document.querySelector('.js-footer');
-//   const bodyHeight = document.body.clientHeight;
-//   const windowScrollHeight = document.documentElement.clientHeight + document.documentElement.scrollTop;
-//   const footerHeight = footer.clientHeight;
-//   if (bodyHeight - windowScrollHeight <= footerHeight + 20) {
-//     targetElement.style.position = 'absolute';
-//     targetElement.style.bottom = footerHeight + 16 + 'px';
-//   } else {
-//     targetElement.style.position = 'fixed';
-//     targetElement.style.bottom = 12 + 'px';
-//   }
-// });
 window.addEventListener('scroll', function () {
   const targetElement = document.querySelector('.js-floatingBanner');
   const footer = document.querySelector('.js-footer');
+
+  // ページ全体（コンテンツ）の高さを取得
   const bodyHeight = document.body.offsetHeight;
 
+  // スクロール位置を取得
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // ビューポートの高さを取得（Safari 下部ツールバーを考慮）
   const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+
+  // 現在のスクロール位置 + 画面の高さ = 画面の下端位置
   const windowScrollHeight = scrollTop + viewportHeight;
 
+  // フッターの高さを取得
   const footerHeight = footer.clientHeight;
 
+  // ページの下端と画面の下端の距離がフッターの高さ以下の場合
   if (bodyHeight - windowScrollHeight <= footerHeight) {
+    // 追従バナーをフッターの上に固定
     targetElement.style.position = 'absolute';
     targetElement.style.bottom = footerHeight + 12 + 'px';
   } else {

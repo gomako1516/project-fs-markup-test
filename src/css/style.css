@@ -1026,7 +1026,7 @@ main {
   display: block;
   width: 1.6em;
   height: 1.6em;
-  background-image: url("../../../img/icon/icon_question.svg");
+  background-image: url("../img/icon/icon_question.svg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1097,7 +1097,7 @@ main {
   width: 1em;
   height: 1em;
   display: inline-block;
-  background-image: url("../../../img/icon/icon_warning.svg");
+  background-image: url("../img/icon/icon_warning.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
