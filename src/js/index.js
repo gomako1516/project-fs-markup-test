@@ -47,7 +47,7 @@ window.addEventListener('scroll', function () {
   const targetElement = document.querySelector('.js-floatingBanner');
   const footer = document.querySelector('.js-footer');
   const bodyHeight = document.body.clientHeight;
-  const windowScrollHeight = document.documentElement.clientHeight + document.documentElement.scrollTop;
+  const windowScrollHeight = document.documentElement.clientHeight + document.documentElement.scrollTop || document.body.scrollTop || document.scrollingElement.scrollTop || window.pageYOffset || window.scrollY;
   const footerHeight = footer.clientHeight;
   if (bodyHeight - windowScrollHeight <= footerHeight + 20) {
     targetElement.style.position = 'absolute';
