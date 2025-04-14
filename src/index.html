@@ -1,18 +1,263 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>futureshop SaaS型ECサイト構築プラットフォーム</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js" defer></script>
+  <script src="js/animation.js" defer></script>
+  <script src="js/form.js" defer></script>
+  <script src="js/index.js" defer></script>
 </head>
-<body>
-  <p>abc</p>
-  <a href="about.html">about</a>
-  <ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-  </ul>
+
+<body class="l-home">
+  <header class="l-header js-header js-fadeIn">
+    <div class="l-header__inner">
+      <div class="l-header__siteTitle">
+        <a href="index.html" class="l-header__siteTitle_logo">
+          <img src="img/common/logo.svg" alt="futureshop" width="160" height="37">
+        </a>
+        <h1 class="l-header__siteTitle_title">SaaS型ECサイト構築プラットフォーム</h1>
+      </div>
+      <div class="l-header__menu">
+        <nav class="l-header__menu_nav">
+          <ul class="l-header__menu_navList">
+            <li class="l-header__menu_navItem">
+              <a href="index.html" class="l-header__menu_navItem_link">ブログ</a>
+            </li>
+            <li class="l-header__menu_navItem">
+              <a href="index.html" class="l-header__menu_navItem_link">会社概要</a>
+            </li>
+            <li class="l-header__menu_navItem">
+              <a href="index.html" class="l-header__menu_navItem_link">マニュアル</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="l-header__menu_search">
+          <search class="l-header__search">
+            <form>
+              <input type="search" id="serach" placeholder="キーワード検索">
+              <button type="submit" aria-label="検索する">
+                <img src="img/icon/icon_search.svg" alt="検索アイコン" width="24" height="24">
+              </button>
+            </form>
+          </search>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="l-home__mv">
+      <div class="l-home__mv_content l-inner">
+        <p class="l-home__mv_copy js-fadeUp">
+          成長しつづける<span class="u-c-accent">Eコマース</span>のために、<br>
+          しなやかに<span class="u-c-accent">変化</span>し、<span class="u-c-accent">フレンドリーに伴走</span>します。
+        </p>
+        <ul class="l-home_mv_list js-fadeUps">
+          <li class="l-home_mv_item">システム制限やコスト問題からの開放</li>
+          <li class="l-home_mv_item">あらゆるKPIを掌握する充実のレポート機能</li>
+          <li class="l-home_mv_item">100以上の機能拡張連携外部サービス</li>
+        </ul>
+      </div>
+      <div class="l-home__mv_bg">
+        <img src="img/home/mv.png" alt="" width="1920" height="430">
+      </div>
+    </div>
+
+    <div class="l-container">
+      <section class="l-home__news l-inner">
+        <h2 class="c-heading js-fadeIn">お知らせ</h2>
+        <ul class="l-home__newsList js-fadeIn">
+          <li class="l-home__newsItem">
+            <span class="l-home__newsItem_date">
+              <time datetime="2024-10-03">2024.10.03</time>
+            </span>
+            <a href="index.html" class="l-home__newsItem_title">
+              フューチャーショップ、EC特化のワークフロー作成ツール「TēPs（テープス）」との連携開始
+            </a>
+          </li>
+          <li class="l-home__newsItem">
+            <span class="l-home__newsItem_date">
+              <time datetime="2024-09-05">2024.09.05</time>
+            </span>
+            <a href="index.html" class="l-home__newsItem_title">
+              フューチャーショップ、ウェブアクセシビリティツール「ユニウェブ」との連携開始
+            </a>
+          </li>
+          <li class="l-home__newsItem">
+            <span class="l-home__newsItem_date">
+              <time datetime="2024-09-02">2024.09.02</time>
+            </span>
+            <a href="index.html" class="l-home__newsItem_title">
+              東京支社 オフィス移転のお知らせ
+            </a>
+          </li>
+          <li class="l-home__newsItem">
+            <span class="l-home__newsItem_date">
+              <time datetime="2024-08-08">2024.08.08</time>
+            </span>
+            <a href="index.html" class="l-home__newsItem_title">
+              フューチャーショップ、YouTube チャンネルや動画に商品が掲載できる「YouTube ショッピング」活用オンラインセミナーを8月20日（火）に実施
+            </a>
+          </li>
+          <li class="l-home__newsItem">
+            <span class="l-home__newsItem_date">
+              <time datetime="2024-07-23">2024.07.23</time>
+            </span>
+            <a href="index.html" class="l-home__newsItem_title">
+              フューチャーショップ、YouTube チャンネルや動画に商品が掲載できる「YouTube ショッピング」との連携開始
+            </a>
+          </li>
+        </ul>
+        <ul class="l-home__newsCards">
+          <li class="c-card js-fadeIn">
+            <a href="index.html" class="c-card__link">
+              <div class="c-card__thumb">
+                <img src="img/home/bnr_communication.png"
+                  srcset="img/home/bnr_communication.png 1x, img/home/bnr_communication@2x.png 2x" alt="" width="600"
+                  height="315">
+              </div>
+              <div class="c-card__body">
+                <ul class="c-card__categories">
+                  <li class="c-catd__category c-catd__category--new">NEW</li>
+                  <li class="c-catd__category c-catd__category--seminar">セミナー</li>
+                </ul>
+                <p class="c-card__title">
+                  オンライン開催！つながりを深めていくことを大切にしているお店が、 中長期視点で「futureshop」を選んだ理由。
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="c-card js-fadeIn">
+            <a href="index.html" class="c-card__link">
+              <div class="c-card__thumb">
+                <img src="img/home/bnr_fs.png" srcset="img/home/bnr_fs.png 1x, img/home/bnr_fs@2x.png 2x" alt=""
+                  width="600" height="315">
+              </div>
+              <div class="c-card__body">
+                <ul class="c-card__categories">
+                  <li class="c-catd__category c-catd__category--new">NEW</li>
+                  <li class="c-catd__category c-catd__category--security">セキュリティ</li>
+                </ul>
+                <p class="c-card__title">
+                  管理TOPのログインに関しての仕様変更について詳細はこちらをご確認ください
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="c-card js-fadeIn">
+            <a href="index.html" class="c-card__link">
+              <div class="c-card__thumb">
+                <img src="img/home/bnr_roadmap.png" srcset="img/home/bnr_roadmap.png 1x, img/home/bnr_roadmap@2x.png 2x"
+                  alt="" width="600" height="315">
+              </div>
+              <div class="c-card__body">
+                <ul class="c-card__categories">
+                  <li class="c-catd__category c-catd__category--new">NEW</li>
+                  <li class="c-catd__category c-catd__category--seminar">セミナー</li>
+                </ul>
+                <p class="c-card__title">
+                  オンライン開催！《これから自社EC（公式本店ECサイト）を立ち上げる方へ》ECサイト開設のロードマップ 成功する自社ECのコツと事例
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="l-home__request l-inner">
+        <h2 class="c-heading js-fadeIn">資料請求</h2>
+        <div class="l-home__request_content">
+          <div class="l-home__request_inner">
+            <div class="l-home__request_form js-fadeIn">
+              <form class="p-form js-form">
+                <div class="p-form__block">
+                  <div class="p-form__label">
+                    <label for="name" class="p-form__label_text">
+                      氏名
+                      <span class="p-form__require">必須</span>
+                    </label>
+                  </div>
+                  <div class="p-form__field">
+                    <input type="text" name="name" id="name" class="c-input">
+                    <p class="p-form__error js-formError"></p>
+                  </div>
+                </div>
+                <div class="p-form__block">
+                  <div class="p-form__label">
+                    <label for="kana" class="p-form__label_text">
+                      ふりがな
+                      <span class="p-form__require">必須</span>
+                    </label>
+                  </div>
+                  <div class="p-form__field">
+                    <input type="text" name="kana" id="kana" class="c-input">
+                    <p class="p-form__error js-formError"></p>
+                  </div>
+                </div>
+                <div class="p-form__block">
+                  <div class="p-form__label">
+                    <label for="company" class="p-form__label_text">
+                      会社名
+                    </label>
+                  </div>
+                  <div class="p-form__field">
+                    <input type="text" name="company" class="c-input">
+                  </div>
+                </div>
+                <div class="p-form__block">
+                  <div class="p-form__label">
+                    <label for="message" class="p-form__label_text">
+                      備考
+                    </label>
+                  </div>
+                  <div class="p-form__field">
+                    <textarea name="message" class="c-textarea"></textarea>
+                  </div>
+                </div>
+                <div class="p-form__checkbox">
+                  <label for="privacy" class="p-form__checkbox_label">個人情報保護方針に同意いただけましたら、チェックを入れてください</label>
+                  <input type="checkbox" id="privacy" name="privacy" value="1">
+                  <p class="p-form__error js-formError"></p>
+                </div>
+                <div class="p-form__button">
+                  <button type="submit" class="c-button c-button--primary js-submit">送信する</button>
+                </div>
+              </form>
+            </div>
+            <div class="l-home__request_desc js-fadeIn">
+              <p class="l-home__request_desc_text">
+                フォームからご請求いただける資料では、以下の調査結果をレポートしています。
+              </p>
+              <ul class="l-home__request_desc_list">
+                <li class="l-home__request_desc_item">注文件数変化率（2020年昨対比）</li>
+                <li class="l-home__request_desc_item">月別EC利用状況</li>
+                <li class="l-home__request_desc_item">新規会員数</li>
+                <li class="l-home__request_desc_item">業界別売上前年比（上位10位）</li>
+                <li class="l-home__request_desc_item">会員全体-決済利用状況</li>
+                <li class="l-home__request_desc_item">新規会員限定-決済利用状況</li>
+                <li class="l-home__request_desc_item">年間売上TOP100店舗のリピーター率（12月度調査）</li>
+                <li class="l-home__request_desc_item">モバイル化率（月別）</li>
+                <li class="l-home__request_desc_item">モバイル化率（業界別）</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div class="p-floatingBanner js-floatingBanner">
+    <a href="index.html" class="c-button c-button--primary">
+      お問い合わせ
+    </a>
+  </div>
+  <footer class="l-footer js-footer">
+    <p class="l-footer__copyright">© Future Shop Co.,Ltd. All Rights reserved.</p>
+  </footer>
 </body>
+
 </html>

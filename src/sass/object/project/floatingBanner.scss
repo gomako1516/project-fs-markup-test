@@ -1,0 +1,36 @@
+@charset 'utf-8';
+@use '../../foundation/global/_global' as *;
+
+///////////////////////////////////////////////////////////
+// 追従バナー
+///////////////////////////////////////////////////////////
+
+.p-floatingBanner {
+  position: fixed;
+  right: 2%;
+  bottom: 12px;
+  transition: opacity .3s ease, visibility .3s ease, bottom .3s ease;
+
+  &.is-stopped {
+    bottom: 60px;
+  }
+
+  .c-button {
+    position: relative;
+    width: 200px;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: .8em;
+      transform: translateY(-50%);
+      content: "";
+      display: block;
+      width: 1.6em;
+      height: 1.6em;
+      background-image: url("../../../img/icon/icon_question.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}

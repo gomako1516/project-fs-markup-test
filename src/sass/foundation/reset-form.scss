@@ -4,10 +4,6 @@
 
 @use 'global/_global' as *;
 
-form {
-  // accent-color: $c--primary;
-}
-
 button,
 input,
 textarea,
@@ -18,6 +14,10 @@ select {
   color: inherit;
   text-transform: none;
   border-radius: 0;
+  appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
 textarea {
@@ -52,4 +52,13 @@ button,
 
 label {
   cursor: pointer;
+}
+
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  color: inherit;
+  background: none;
+  touch-action: manipulation; // iOS 拡大ズームを無効
 }

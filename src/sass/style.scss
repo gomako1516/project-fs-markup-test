@@ -7,12 +7,18 @@
 
 @use 'layout/header';
 @use 'layout/footer';
+@use 'layout/container';
 @use 'layout/inner';
 @use 'layout/page/home';
 
 @use 'object/component/button';
 @use 'object/component/card';
 @use 'object/component/heading';
+@use 'object/component/input';
+@use 'object/component/textarea';
 
+@use 'object/project/floatingBanner';
+@use 'object/project/form';
 
+@use 'object/utility/font';
 @use 'object/utility/zindex';

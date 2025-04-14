@@ -5,6 +5,11 @@
 // 見出し
 ///////////////////////////////////////////////////////////
 
-.c-button {
-  display: block;
+.c-heading {
+  font-size: myClamp(18, 28);
+  font-weight: 600;
+  color: $c-primary;
+  line-height: 1.2;
+  padding-left: 0.5em;
+  border-left: 4px solid $c-primary;
 }

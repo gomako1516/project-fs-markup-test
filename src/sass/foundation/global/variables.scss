@@ -16,13 +16,17 @@ $md: 768px;
 $lg: 1024px;
 $xl: 1280px;
 
-// Path
+// Z-index
 // **********************************************
-$path_img: '../img/';
+$z-hamburger: 500;
+$z-headerInner: 450;
+$z-nav: 400;
+$z-headerBg: 350;
+$z-header: 300;
+$z-fixedItem: 200;
 
 // Color
 // **********************************************
-
 $c-primary: #004BA5;
 $c-primary-hover: #1565c0;
 $c-accent: #ff4b00;
@@ -33,10 +37,11 @@ $c-border: #ccc;
 $c-text: #333;
 $c-white: #fff;
 $c-bg: #ededed;
+$c-gray: #ccc;
 
-$category-news: #1571DA;
-$category-seminar: #001e64;
-$category-security: #FFF516;
+$c-category-news: #1571DA;
+$c-category-seminar: #001e64;
+$c-category-security: #FFF516;
 
 // Font
 // **********************************************

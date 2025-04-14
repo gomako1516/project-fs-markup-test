@@ -1,0 +1,9 @@
+@charset 'utf-8';
+
+@use '../../foundation/global/_global' as *;
+
+.u-c {
+  &-accent {
+    color: $c-accent;
+  }
+}
