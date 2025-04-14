@@ -8,7 +8,8 @@
 .p-floatingBanner {
   position: fixed;
   right: 2%;
-  bottom: 12px;
+  opacity: 0;
+  visibility: hidden;
   transition: opacity .3s ease, visibility .3s ease, bottom .3s ease;
 
   .c-button {

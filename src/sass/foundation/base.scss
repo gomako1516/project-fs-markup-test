@@ -6,15 +6,19 @@
 
 @use 'global/_global' as *;
 
-// html {
-//   scrollbar-gutter: stable both-edges;
-// }
-
 body {
+  position: relative;
   font-family: $font_gothic;
   font-size: 14px;
   line-height: 1.6;
   color: $c-text;
   word-break: break-all;
   background-color: $c-bg;
+}
+
+main {
+  padding-top: 60px;
+  @include max-screen($md) {
+    padding-top: 100px;
+  }
 }

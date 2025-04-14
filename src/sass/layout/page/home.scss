@@ -11,10 +11,6 @@
   position: relative;
   height: 430px;
   height: myClamp(380, 430);
-  margin-top: 60px;
-  @include max-screen($md) {
-    margin-top: 100px;
-  }
 }
 
 .l-home__mv_content {
@@ -164,7 +160,7 @@
   margin-top: 16px;
   background-color: $c-bg;
   @include max-screen($md) {
-    padding: 24x 16px;
+    padding: 24px 16px;
   }
 }
 
@@ -194,16 +190,15 @@
 
   &::before {
     position: absolute;
-    top: 4px;
+    top: .1em;
     left: 0;
     content: "";
-    width: 1em;
-    height: 1em;
+    width: 1.4em;
+    height: 1.4em;
     display: inline-block;
-    mask-image: url("../img/icon/icon_square.svg");
-    mask-repeat: no-repeat;
-    mask-size: cover;
-    background-color: $c-primary;
+    background-image: url("../img/icon/icon_square.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &+& {

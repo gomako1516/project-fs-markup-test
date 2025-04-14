@@ -467,12 +467,22 @@ button {
 }
 
 body {
+  position: relative;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 14px;
   line-height: 1.6;
   color: #333;
   word-break: break-all;
   background-color: #ededed;
+}
+
+main {
+  padding-top: 60px;
+}
+@media (max-width: 768px) {
+  main {
+    padding-top: 100px;
+  }
 }
 
 .l-header {
@@ -675,12 +685,6 @@ body {
   position: relative;
   height: 430px;
   height: clamp(23.75rem, 22.7083333333rem + 4.6296296296vw, 26.875rem);
-  margin-top: 60px;
-}
-@media (max-width: 768px) {
-  .l-home__mv {
-    margin-top: 100px;
-  }
 }
 
 .l-home__mv_content {
@@ -833,7 +837,7 @@ body {
 }
 @media (max-width: 768px) {
   .l-home__request_content {
-    padding: 24x 16px;
+    padding: 24px 16px;
   }
 }
 
@@ -866,19 +870,15 @@ body {
 }
 .l-home__request_desc_item::before {
   position: absolute;
-  top: 4px;
+  top: 0.1em;
   left: 0;
   content: "";
-  width: 1em;
-  height: 1em;
+  width: 1.4em;
+  height: 1.4em;
   display: inline-block;
-  -webkit-mask-image: url("../img/icon/icon_square.svg");
-  mask-image: url("../img/icon/icon_square.svg");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-  mask-size: cover;
-  background-color: #004BA5;
+  background-image: url("../img/icon/icon_square.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .l-home__request_desc_item + .l-home__request_desc_item {
   margin-top: 8px;
@@ -1009,7 +1009,8 @@ body {
 .p-floatingBanner {
   position: fixed;
   right: 2%;
-  bottom: 12px;
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease, bottom 0.3s ease;
 }
 .p-floatingBanner .c-button {

@@ -46,14 +46,14 @@ window.addEventListener('scroll', () => {
 window.addEventListener('scroll', function () {
   const targetElement = document.querySelector('.js-floatingBanner');
   const footer = document.querySelector('.js-footer');
-  // ↓document.documentElement.clientHeight +以降の記述はスクロールの高さを取得するための記述であるが、クローム、IEなどの各ブラウザに対応するために記述を分けている
-  const windowScrollHeight = document.documentElement.clientHeight + document.documentElement.scrollTop || document.body.scrollTop || document.scrollingElement.scrollTop || window.pageYOffset || window.scrollY;
+  const bodyHeight = document.body.clientHeight;
+  const windowScrollHeight = document.documentElement.clientHeight + document.documentElement.scrollTop;
   const footerHeight = footer.clientHeight;
   if (bodyHeight - windowScrollHeight <= footerHeight) {
     targetElement.style.position = 'absolute';
-    targetElement.style.bottom = footerHeight + 'px';
+    targetElement.style.bottom = footerHeight + 10 + 'px';
   } else {
     targetElement.style.position = 'fixed';
-    targetElement.style.bottom = 0;
+    targetElement.style.bottom = 10 + 'px';
   }
 });
