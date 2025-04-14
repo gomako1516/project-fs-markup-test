@@ -43,15 +43,34 @@ window.addEventListener('scroll', () => {
 
 /* 追従バナーをフッター手前で止める
 ----------------------------- */
+// window.addEventListener('scroll', function () {
+//   const targetElement = document.querySelector('.js-floatingBanner');
+//   const footer = document.querySelector('.js-footer');
+//   const bodyHeight = document.body.clientHeight;
+//   const windowScrollHeight = document.documentElement.clientHeight + document.documentElement.scrollTop;
+//   const footerHeight = footer.clientHeight;
+//   if (bodyHeight - windowScrollHeight <= footerHeight + 20) {
+//     targetElement.style.position = 'absolute';
+//     targetElement.style.bottom = footerHeight + 16 + 'px';
+//   } else {
+//     targetElement.style.position = 'fixed';
+//     targetElement.style.bottom = 12 + 'px';
+//   }
+// });
 window.addEventListener('scroll', function () {
   const targetElement = document.querySelector('.js-floatingBanner');
   const footer = document.querySelector('.js-footer');
-  const bodyHeight = document.body.clientHeight;
-  const windowScrollHeight = document.documentElement.clientHeight + document.documentElement.scrollTop || document.body.scrollTop || document.scrollingElement.scrollTop || window.pageYOffset || window.scrollY;
+  const bodyHeight = document.body.offsetHeight;
+
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const viewportHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  const windowScrollHeight = scrollTop + viewportHeight;
+
   const footerHeight = footer.clientHeight;
-  if (bodyHeight - windowScrollHeight <= footerHeight + 20) {
+
+  if (bodyHeight - windowScrollHeight <= footerHeight) {
     targetElement.style.position = 'absolute';
-    targetElement.style.bottom = footerHeight + 16 + 'px';
+    targetElement.style.bottom = footerHeight + 12 + 'px';
   } else {
     targetElement.style.position = 'fixed';
     targetElement.style.bottom = 12 + 'px';
