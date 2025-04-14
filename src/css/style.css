@@ -726,8 +726,8 @@ body {
   width: 1em;
   height: 1em;
   display: inline-block;
-  -webkit-mask-image: url("../../../img/icon/icon_check.svg");
-  mask-image: url("../../../img/icon/icon_check.svg");
+  -webkit-mask-image: url("../img/icon/icon_check.svg");
+  mask-image: url("../img/icon/icon_check.svg");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: cover;
@@ -784,7 +784,7 @@ body {
   width: 1em;
   height: 1em;
   display: inline-block;
-  background-image: url("../../../img/icon/icon_circle.svg");
+  background-image: url("../img/icon/icon_circle.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -872,8 +872,8 @@ body {
   width: 1em;
   height: 1em;
   display: inline-block;
-  -webkit-mask-image: url("../../../img/icon/icon_square.svg");
-  mask-image: url("../../../img/icon/icon_square.svg");
+  -webkit-mask-image: url("../img/icon/icon_square.svg");
+  mask-image: url("../img/icon/icon_square.svg");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-size: cover;
@@ -1011,9 +1011,6 @@ body {
   right: 2%;
   bottom: 12px;
   transition: opacity 0.3s ease, visibility 0.3s ease, bottom 0.3s ease;
-}
-.p-floatingBanner.is-stopped {
-  bottom: 60px;
 }
 .p-floatingBanner .c-button {
   position: relative;

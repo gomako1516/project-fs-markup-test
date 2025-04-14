@@ -27,7 +27,7 @@ window.addEventListener('scroll', () => {
   const pageTop = document.querySelector('.js-floatingBanner');
   const currentY = window.pageYOffset;
 
-  if(currentY >= 200) {
+  if (currentY >= 200) {
     setTimeout(() => {
       pageTop.style.opacity = 1;
       pageTop.style.visibility = 'visible';
@@ -43,33 +43,17 @@ window.addEventListener('scroll', () => {
 
 /* 追従バナーをフッター手前で止める
 ----------------------------- */
-const floatingBanner = document.querySelector('.js-floatingBanner');
-const footer = document.querySelector('.js-footer');
-
-const bannerMarginBottom = 20; // バナーと画面下の距離
-const stopMargin = 10; // footerの上から10px上で止める
-
-function handleFloatingBanner() {
-  const scrollY = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const documentHeight = document.body.offsetHeight;
-  const footerHeight = footer.offsetHeight;
-
-  // バナーの下端位置
-  const bannerBottom = scrollY + windowHeight - bannerMarginBottom;
-
-  // 停止位置（ページ全体の高さ − footerの高さ − stopMargin）
-  const stopPositionY = documentHeight - footerHeight - stopMargin;
-
-  if (bannerBottom >= stopPositionY) {
-    floatingBanner.classList.add('is-stopped');
+window.addEventListener('scroll', function () {
+  const targetElement = document.querySelector('.js-floatingBanner');
+  const footer = document.querySelector('.js-footer');
+  // ↓document.documentElement.clientHeight +以降の記述はスクロールの高さを取得するための記述であるが、クローム、IEなどの各ブラウザに対応するために記述を分けている
+  const windowScrollHeight = document.documentElement.clientHeight + document.documentElement.scrollTop || document.body.scrollTop || document.scrollingElement.scrollTop || window.pageYOffset || window.scrollY;
+  const footerHeight = footer.clientHeight;
+  if (bodyHeight - windowScrollHeight <= footerHeight) {
+    targetElement.style.position = 'absolute';
+    targetElement.style.bottom = footerHeight + 'px';
   } else {
-    floatingBanner.classList.remove('is-stopped');
+    targetElement.style.position = 'fixed';
+    targetElement.style.bottom = 0;
   }
-}
-
-window.addEventListener('scroll', handleFloatingBanner);
-window.addEventListener('resize', handleFloatingBanner);
-
-// 初期実行
-handleFloatingBanner();
+});

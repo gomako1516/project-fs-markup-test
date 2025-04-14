@@ -11,10 +11,6 @@
   bottom: 12px;
   transition: opacity .3s ease, visibility .3s ease, bottom .3s ease;
 
-  &.is-stopped {
-    bottom: 60px;
-  }
-
   .c-button {
     position: relative;
     width: 200px;
