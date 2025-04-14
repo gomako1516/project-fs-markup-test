@@ -49,11 +49,11 @@ window.addEventListener('scroll', function () {
   const bodyHeight = document.body.clientHeight;
   const windowScrollHeight = document.documentElement.clientHeight + document.documentElement.scrollTop;
   const footerHeight = footer.clientHeight;
-  if (bodyHeight - windowScrollHeight <= footerHeight) {
+  if (bodyHeight - windowScrollHeight <= footerHeight + 20) {
     targetElement.style.position = 'absolute';
-    targetElement.style.bottom = footerHeight + 10 + 'px';
+    targetElement.style.bottom = footerHeight + 16 + 'px';
   } else {
     targetElement.style.position = 'fixed';
-    targetElement.style.bottom = 10 + 'px';
+    targetElement.style.bottom = 12 + 'px';
   }
 });
