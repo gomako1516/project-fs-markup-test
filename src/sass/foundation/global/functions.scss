@@ -5,12 +5,6 @@
 // functions
 ///////////////////////////////////////////////////////////
 
-// pxをvwに変換する関数
-// **********************************************
-@function pxtovw($num, $width: $breackpoint_md / ($breackpoint_md * 0 + 1)) {
-  @return (1vw * $num / $width * 100);
-}
-
 // clamp()の計算を楽にする関数
 // @see https://zenn.dev/hilosiva/articles/e9ae1bee08bdfc
 // @param 最小値, 最大値, 最小ビューポート, 最大ビューポート（後半2つは省略可）

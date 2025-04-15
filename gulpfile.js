@@ -26,7 +26,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(cssDist)); // コンパイル後のCSSを出力する場所
 });
 
-// タスクを定義
+// 開発サーバー起動
 gulp.task('server', function () {
   return gulp.src('./src')
     .pipe(webserver({
@@ -36,10 +36,7 @@ gulp.task('server', function () {
     }));
 });
 
-// npx gulp watch
+// npm run watch
 gulp.task('watch', gulp.series('sass', gulp.parallel('server', function () {
   gulp.watch('./src/sass/**/*.scss', gulp.task('sass'));
 })));
-
-// npx gulp
-gulp.task('default', gulp.series('sass'));

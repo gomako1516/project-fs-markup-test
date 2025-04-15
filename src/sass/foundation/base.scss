@@ -17,8 +17,8 @@ body {
 }
 
 main {
-  padding-top: 60px;
+  padding-top: $header_h_md;
   @include max-screen($md) {
-    padding-top: 100px;
+    padding-top: $header_h_sm;
   }
 }
