@@ -5,10 +5,15 @@
 const form = document.querySelector('.js-form');
 const submitButton = document.querySelector('.js-submit');
 
+// フォーム要素取得
+const nameElment = document.getElementById('name');
+const kanaElment = document.getElementById('kana');
+const privacyElment = document.getElementById('privacy');
+
 // エラー要素取得
-const nameError = document.querySelector('#name + .js-formError');
-const kanaError = document.querySelector('#kana + .js-formError');
-const privacyError = document.querySelector('#privacy + .js-formError');
+const nameError = nameElment.closest('.p-form__field').querySelector('.js-formError');
+const kanaError = kanaElment.closest('.p-form__field').querySelector('.js-formError');
+const privacyError = privacyElment.parentElement.querySelector('.js-formError');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -16,40 +21,45 @@ form.addEventListener('submit', (e) => {
   let isValid = true;
 
   // 入力フィールドの値を取得
-  const name = document.getElementById('name').value.trim();
-  const kana = document.getElementById('kana').value.trim();
-  const privacy = document.getElementById('privacy').checked;
+  const nameValue = document.getElementById('name').value.trim();
+  const kanaValue = document.getElementById('kana').value.trim();
+  const privacyVlaue = document.getElementById('privacy').checked;
 
   // 氏名：未入力チェック
-  if (!name) {
+  if (!nameValue) {
     nameError.textContent = '氏名を入力してください。';
-    nameError.style.display = 'block';
+    nameError.classList.add('is-error');
+    nameElment.classList.add('is-error')
     isValid = false;
   } else {
-    nameError.style.display = 'none';
+    nameError.classList.remove('is-error');
+    nameElment.classList.remove('is-error')
   }
 
   // ふりがな：未入力・ひらがなカタカナチェック
   const kanaRegex = /^[ぁ-んァ-ヶー　\s]+$/;
-  if (!kana) {
+  if (!kanaValue) {
     kanaError.textContent = 'ふりがなを入力してください。';
-    kanaError.style.display = 'block';
+    kanaError.classList.add('is-error');
+    kanaElment.classList.add('is-error')
     isValid = false;
-  } else if (!kanaRegex.test(kana)) {
+  } else if (!kanaRegex.test(kanaValue)) {
     kanaError.textContent = '「ひらがな」または「カタカナ」で入力してください。';
-    kanaError.style.display = 'block';
+    kanaError.classList.add('is-error');
+    kanaElment.classList.remove('is-error')
     isValid = false;
   } else {
-    kanaError.style.display = 'none';
+    kanaError.classList.remove('is-error');
+    kanaElment.classList.remove('is-error')
   }
 
   // プライバシーポリシー同意チェック
-  if (!privacy) {
+  if (!privacyVlaue) {
     privacyError.textContent = '個人情報保護方針に同意してください。';
-    privacyError.style.display = 'block';
+    privacyError.classList.add('is-error');
     isValid = false;
   } else {
-    privacyError.style.display = 'none';
+    privacyError.classList.remove('is-error');
   }
 
   // バリデーションNGなら送信キャンセル

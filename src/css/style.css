@@ -987,23 +987,35 @@ main {
   font-size: 18px;
   padding: 0.27em 1em 0.2em;
   background-color: #fff;
-  border: 1px solid #ccc;
+  outline: 1px solid #ccc;
   border-radius: 4px;
 }
+@media (max-width: 768px) {
+  .c-input {
+    font-size: 16px;
+  }
+}
 .c-input:focus {
-  border-color: #004BA5;
+  outline-color: #004BA5;
 }
 
 .c-textarea {
   width: 100%;
   min-height: 200px;
   padding: 0.8em 1em;
+  font-size: 18px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  outline: 1px solid #ccc;
   border-radius: 4px;
+  resize: none;
+}
+@media (max-width: 768px) {
+  .c-textarea {
+    font-size: 16px;
+  }
 }
 .c-textarea:focus {
-  border-color: #004BA5;
+  outline-color: #004BA5;
 }
 
 .p-floatingBanner {
@@ -1081,6 +1093,10 @@ main {
   }
 }
 
+.p-form__field > input.is-error {
+  border-color: #D9000D;
+}
+
 .p-form__error {
   display: none;
   position: relative;
@@ -1102,7 +1118,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.p-form__error.is-error-show {
+.p-form__error.is-error {
   display: block;
 }
 

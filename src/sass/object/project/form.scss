@@ -51,6 +51,16 @@
   }
 }
 
+.p-form__field {
+  & > {
+    input {
+      &.is-error {
+        border-color: $c-warning;
+      }
+    }
+  }
+}
+
 .p-form__error {
   display: none;
   position: relative;
@@ -73,7 +83,7 @@
     background-size: cover;
   }
 
-  &.is-error-show {
+  &.is-error {
     display: block;
   }
 }

@@ -9,11 +9,16 @@
   width: 100%;
   min-height: 200px;
   padding: .8em 1em;
+  font-size: 18px;
   background-color: $c-white;
-  border: 1px solid $c-border;
+  outline: 1px solid $c-border;
   border-radius: 4px;
+  resize: none;
+  @include max-screen($md) {
+    font-size: 16px;
+  }
 
   &:focus {
-    border-color: $c-primary;
+    outline-color: $c-primary;
   }
 }
