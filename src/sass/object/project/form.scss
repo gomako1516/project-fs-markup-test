@@ -55,7 +55,7 @@
   & > {
     input {
       &.is-error {
-        border-color: $c-warning;
+        outline-color: $c-warning;
       }
     }
   }

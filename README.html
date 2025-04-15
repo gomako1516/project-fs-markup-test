@@ -1,0 +1,78 @@
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="_0"></a>採用選考課題</h1>
+<h2 class="code-line" data-line-start=2 data-line-end=3 ><a id="_2"></a>環境構築</h2>
+<p class="has-line-data" data-line-start="4" data-line-end="6">Gulpを使用して実装環境を構築しました。<br>
+以下コマンドで必要なモジュールをインストール（<code>node v18.20.0</code>で動作確認済み）。</p>
+<pre><code class="has-line-data" data-line-start="8" data-line-end="10">npm install
+</code></pre>
+<h2 class="code-line" data-line-start=11 data-line-end=12 ><a id="_11"></a>実行コマンド</h2>
+<p class="has-line-data" data-line-start="13" data-line-end="14">以下のコマンドで、Sassのコンパイルとローカルサーバー（localhost:8000）が起動します。</p>
+<pre><code class="has-line-data" data-line-start="16" data-line-end="18">npm run watch
+</code></pre>
+<h2 class="code-line" data-line-start=19 data-line-end=20 ><a id="_19"></a>工数</h2>
+<p class="has-line-data" data-line-start="21" data-line-end="22">課題に取り組んだ工数を以下の通り記載します。</p>
+<ul>
+<li class="has-line-data" data-line-start="23" data-line-end="24">環境構築：0.5h</li>
+<li class="has-line-data" data-line-start="24" data-line-end="25">構築（HTML/SCSS/JS）：6h</li>
+<li class="has-line-data" data-line-start="25" data-line-end="27">実機確認・修正：1h</li>
+</ul>
+<p class="has-line-data" data-line-start="27" data-line-end="28">合計工数：7.5h</p>
+<h2 class="code-line" data-line-start=29 data-line-end=30 ><a id="_29"></a>実機確認</h2>
+<p class="has-line-data" data-line-start="31" data-line-end="32">以下の環境で実機確認を行っています。</p>
+<ul>
+<li class="has-line-data" data-line-start="33" data-line-end="34">Windows11 Chrome / Edge</li>
+<li class="has-line-data" data-line-start="34" data-line-end="35">Mac Chrome / Safari</li>
+<li class="has-line-data" data-line-start="35" data-line-end="37">iOS Chorme / Safari</li>
+</ul>
+<p class="has-line-data" data-line-start="37" data-line-end="38">また、以下のツールでソース確認を行っています。</p>
+<ul>
+<li class="has-line-data" data-line-start="39" data-line-end="40">markuplint：HTML構文チェック</li>
+<li class="has-line-data" data-line-start="40" data-line-end="42">CSS Validation Service：CSS構文チェック</li>
+</ul>
+<h2 class="code-line" data-line-start=42 data-line-end=43 ><a id="_42"></a>考慮したポイント</h2>
+<p class="has-line-data" data-line-start="44" data-line-end="45">マークアップの際に考慮したポイントを以下の通り記載します。</p>
+<h3 class="code-line" data-line-start=46 data-line-end=47 ><a id="1_CSS_46"></a>1. CSS設計</h3>
+<p class="has-line-data" data-line-start="47" data-line-end="51">今回はトップページのみの実装でしたが、<br>
+下層ページが増えることを想定し、BEM + FLOCSSのルールに基づいて、CSS設計を行いました。<br>
+class命名規則にBEMを採用。<br>
+ディレクトリは以下のように構成しています。</p>
+<pre><code class="has-line-data" data-line-start="53" data-line-end="59">.
+├── foundation
+├── layout
+├── object
+└── style.scss
+</code></pre>
+<p class="has-line-data" data-line-start="60" data-line-end="61">以下、抜粋して各ファイルとディレクトリの説明を記載します。</p>
+<ul>
+<li class="has-line-data" data-line-start="62" data-line-end="66"><code>foundation</code>：プロジェクト全体の土台を設定
+<ul>
+<li class="has-line-data" data-line-start="63" data-line-end="64"><code>functions.scss</code>：関数を定義</li>
+<li class="has-line-data" data-line-start="64" data-line-end="65"><code>mixin.scss</code>：メディアクエリなどの指定を定義</li>
+<li class="has-line-data" data-line-start="65" data-line-end="66"><code>variables.scss</code>：カラー、フォントサイズなどの変数管理を</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="66" data-line-end="68"><code>layout</code>：ページ大枠のレイアウトを定義
+<ul>
+<li class="has-line-data" data-line-start="67" data-line-end="68"><code>page/</code>：ページごとの個別レイアウト</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="68" data-line-end="72"><code>object</code>：パーツごとにスタイルを定義
+<ul>
+<li class="has-line-data" data-line-start="69" data-line-end="70"><code>component/</code>：ボタン、カード、入力フォームなどの単体コンポーネントのスタイル</li>
+<li class="has-line-data" data-line-start="70" data-line-end="71"><code>project/</code>：複数のコンポーネントを組み合わせたブロック単位のスタイル</li>
+<li class="has-line-data" data-line-start="71" data-line-end="72"><code>utility/</code>：汎用的なユーティリティクラス</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="72" data-line-end="74"><code>style.scss</code>：各SCSSファイルをインポート＆ビルドするエントリーポイント</li>
+</ul>
+<h3 class="code-line" data-line-start=74 data-line-end=75 ><a id="2_clamp_74"></a>2. clamp関数によるシームレスなサイズ変化</h3>
+<p class="has-line-data" data-line-start="75" data-line-end="79">フォントサイズや余白のサイズにclamp関数を使用。<br>
+ブラウザ幅に応じてサイズが変化し、<br>
+自然なレスポンシブとメディアクエリの指定削減を行っています。<br>
+また、clamp関数の計算を<code>@function</code>で実装して使用しています。</p>
+<h3 class="code-line" data-line-start=80 data-line-end=81 ><a id="3__80"></a>3. お問い合わせバナーの追従化</h3>
+<p class="has-line-data" data-line-start="81" data-line-end="83">お問い合わせのバナーについて、<br>
+CVR向上のために追従するように実装しています。</p>
+<h3 class="code-line" data-line-start=84 data-line-end=85 ><a id="4__84"></a>4. アニメーション</h3>
+<p class="has-line-data" data-line-start="85" data-line-end="88">全体的にフェードイン・アップのアニメーションを実装しています。<br>
+CSSアニメーションでも十分だと思いましたが、<br>
+今回はアニメーション用のJSライブラリ「GSAP」を採用してみました。</p>
